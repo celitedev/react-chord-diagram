@@ -13,6 +13,7 @@ const Groups = ({
     setMouseOverGroup,
     groupLabels,
     labelColors,
+    groupClick,
     disableHover,
 }) => (
     <g className="groups">
@@ -33,6 +34,11 @@ const Groups = ({
                     transform={`rotate(${getAngle(group) * 180 / Math.PI - 90 }) translate(${outerRadius + 10}) ${getAngle(group) > Math.PI ? "rotate(180)" : ""}`}
                     fill={labelColors.length === 1 ? labelColors[0] : labelColors[groupIndex]}
                     style={{textAnchor: (group.startAngle + group.endAngle) / 2 > Math.PI ? "end" : null}}
+                    onClick={(event) => {
+                        if (groupClick) {
+                            groupClick(event, group, groupIndex)
+                        }
+                    }}
                 >
                     {groupLabels[groupIndex]}
                 </text>

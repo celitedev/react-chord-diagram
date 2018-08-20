@@ -39,11 +39,10 @@
   "author": "cElite Dev",
   "homepage": "",
   "license": "MIT",
-  "repository" :
-    {
-      "type" : "git",
-      "url" : "https://github.com/celitedev/react-chord-diagram"
-    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/celitedev/react-chord-diagram"
+  },
   "keywords": [
     "react",
     "chord-diagram",

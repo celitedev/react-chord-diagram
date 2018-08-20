@@ -22,6 +22,7 @@ export default class ChordDiagram extends Component {
         innerRadius: PropTypes.number,
         groupLabels: PropTypes.array,
         groupColors: PropTypes.array,
+        groupClick: PropTypes.func,
         padAngle: PropTypes.number,
         sortGroups: PropTypes.func,
         sortSubgroups: PropTypes.func,
@@ -41,6 +42,7 @@ export default class ChordDiagram extends Component {
         innerRadius: null,
         groupLabels: [],
         groupColors: [],
+        groupClick: null,
         padAngle: 0.05,
         sortGroups: null,
         sortSubgroups: descending,
@@ -76,6 +78,7 @@ export default class ChordDiagram extends Component {
             className,
             groupLabels,
             groupColors,
+            groupClick,
             padAngle,
             sortGroups,
             sortSubgroups,
@@ -122,6 +125,7 @@ export default class ChordDiagram extends Component {
                     setMouseOverGroup={this.setMouseOverGroup}
                     groupLabels={groupLabels}
                     labelColors={labelColors}
+                    groupClick={groupClick}
                     disableHover={disableHover}
                 />
 
